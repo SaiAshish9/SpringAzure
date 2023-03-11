@@ -25,3 +25,6 @@ A resource group is a container that holds resources for an azure solution
 
 <img width="1787" alt="Screenshot 2023-03-12 at 1 30 07 AM" src="https://user-images.githubusercontent.com/43849911/224509139-88169eee-e5b6-4847-a9a8-9d52fc9ceaca.png">
 
+<img width="1790" alt="Screenshot 2023-03-12 at 1 36 26 AM" src="https://user-images.githubusercontent.com/43849911/224509375-b483b2df-6558-44f2-be67-3d05fb9b031a.png">
+
+
