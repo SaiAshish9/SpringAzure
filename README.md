@@ -37,5 +37,11 @@ for JAR we can use embedded server otherwise we can use WAR for tomcat server
 
 <img width="1791" alt="Screenshot 2023-03-12 at 1 41 29 AM" src="https://user-images.githubusercontent.com/43849911/224509575-3f2c3951-31e2-4f39-9ce0-81c6b4e98b82.png">
 
+<img width="1786" alt="Screenshot 2023-03-12 at 1 43 03 AM" src="https://user-images.githubusercontent.com/43849911/224509638-4d1a9c9a-0f29-4b90-a0f0-9e28aadfc976.png">
+
+<img width="1787" alt="Screenshot 2023-03-12 at 1 43 25 AM" src="https://user-images.githubusercontent.com/43849911/224509646-23fc83c7-b681-4227-9f73-60bffe00aa45.png">
+
+<img width="1789" alt="Screenshot 2023-03-12 at 1 46 39 AM" src="https://user-images.githubusercontent.com/43849911/224509757-04193d65-42c5-4f78-9509-ba9a45b9135d.png">
+
 
 
