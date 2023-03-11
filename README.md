@@ -43,5 +43,75 @@ for JAR we can use embedded server otherwise we can use WAR for tomcat server
 
 <img width="1789" alt="Screenshot 2023-03-12 at 1 46 39 AM" src="https://user-images.githubusercontent.com/43849911/224509757-04193d65-42c5-4f78-9509-ba9a45b9135d.png">
 
+<img width="1789" alt="Screenshot 2023-03-12 at 1 49 04 AM" src="https://user-images.githubusercontent.com/43849911/224509843-31e42366-953d-4a91-a934-5070d1c54e3b.png">
+
+<img width="1771" alt="Screenshot 2023-03-12 at 1 49 37 AM" src="https://user-images.githubusercontent.com/43849911/224509860-8f26abfe-39d4-4fb8-90d0-7b864b19d103.png">
+
+<img width="1788" alt="Screenshot 2023-03-12 at 1 51 07 AM" src="https://user-images.githubusercontent.com/43849911/224509917-7b138628-d4a2-4b23-834c-16aea7bb0e6d.png">
+
+<img width="1788" alt="Screenshot 2023-03-12 at 1 51 38 AM" src="https://user-images.githubusercontent.com/43849911/224509934-370d7364-b34e-4bb4-8aa3-d28725bcbd40.png">
+
+```
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+name: Build and deploy JAR app to Azure Web App - spring-azure-demo-by-sai
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Java version
+        uses: actions/setup-java@v1
+        with:
+          java-version: '17'
+
+      - name: Build with Maven
+        run: mvn clean install
+
+      - name: Upload artifact for deployment job
+        uses: actions/upload-artifact@v2
+        with:
+          name: java-app
+          path: '${{ github.workspace }}/target/*.jar'
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: 'production'
+      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+    
+    steps:
+      - name: Download artifact from build job
+        uses: actions/download-artifact@v2
+        with:
+          name: java-app
+
+      - name: Deploy to Azure Web App
+        id: deploy-to-webapp
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'spring-azure-demo-by-sai'
+          slot-name: 'production'
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_d4842f18bd8c4e39bea8f693372b95b8 }}
+          package: '*.jar'
+```
+
+<img width="1787" alt="Screenshot 2023-03-12 at 1 53 18 AM" src="https://user-images.githubusercontent.com/43849911/224510004-fc5d5512-ba70-4aec-9072-976c19b4cd5c.png">
+
+<img width="1786" alt="Screenshot 2023-03-12 at 1 55 33 AM" src="https://user-images.githubusercontent.com/43849911/224510089-40f650eb-afb7-48eb-94a5-ada466b5bc46.png">
+
+<img width="1792" alt="Screenshot 2023-03-12 at 1 56 08 AM" src="https://user-images.githubusercontent.com/43849911/224510113-694284bb-8bb9-48f0-91ac-d56113798985.png">
+
 
 
