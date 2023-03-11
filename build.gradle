@@ -11,7 +11,13 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 
 repositories {
+        maven { url "http://repo.spring.io/libs-release" }
 	mavenCentral()
+	mavenLocal()
+}
+
+jar {
+    enabled = true
 }
 
 dependencies {
