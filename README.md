@@ -5,6 +5,8 @@ Free Plan Details
 App Services
 
 A resource group is a container that holds resources for an azure solution
+
+for JAR we can use embedded server otherwise we can use WAR for tomcat server
 ```
 
 <img width="1261" alt="Screenshot 2023-03-12 at 12 51 00 AM" src="https://user-images.githubusercontent.com/43849911/224507649-c0bbcef9-5945-421a-a659-b5029cdeecef.png">
@@ -27,4 +29,5 @@ A resource group is a container that holds resources for an azure solution
 
 <img width="1790" alt="Screenshot 2023-03-12 at 1 36 26 AM" src="https://user-images.githubusercontent.com/43849911/224509375-b483b2df-6558-44f2-be67-3d05fb9b031a.png">
 
+<img width="1788" alt="Screenshot 2023-03-12 at 1 37 42 AM" src="https://user-images.githubusercontent.com/43849911/224509416-5a32bad4-1a8c-49ca-a6e1-6da9a5a6f861.png">
 
